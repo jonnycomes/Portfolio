@@ -9,11 +9,11 @@ main {
     font-family: Helvetica, sans-serif;
 }
 
-nav, article {
+#navbar, #contents {
     width: 100vw;
 }
 
-nav {
+#navbar {
     background-color: rgba(163,122, 87,0.7);
     height: 50px;
     display: flex;
@@ -21,7 +21,7 @@ nav {
 }
 
 @media (max-width: 450px) {
-    nav {
+    #navbar {
         justify-content: center;
     }
 }
@@ -35,9 +35,11 @@ nav {
     padding-top: 10px;
     padding-bottom: 5px;
     font-size: 1.3em;
+    animation-name: nav-fade;
+    animation-duration: 4s;
 }
 
-article {
+#contents {
     overflow-y: scroll;
     text-align: center;
 }
@@ -59,6 +61,30 @@ article {
     font-size: 1.8em;
     font-weight: normal;
     color: rgba( 27, 29, 72,0.9); 
+    animation-name: welcome-fade;
+    animation-duration: 2s;
+}
+
+#who-I-am {
+    animation-name: who-fade;
+    animation-duration: 3s;
+}
+
+@keyframes welcome-fade {
+    0%  {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes who-fade {
+    0%  {opacity: 0;}
+    50% {opacity: 0;}    
+    100%{opacity: 1;}    
+}
+
+@keyframes nav-fade {
+    0%  {opacity: 0;}
+    70% {opacity: 0;}    
+    100%{opacity: 1;}    
 }
 
 h2 {
@@ -82,7 +108,7 @@ h2 {
     display: block;
     text-decoration: none;
     border-radius: 10px;
-    width: 110px;
+    width: 30%;
     padding: 10px;
     color: white;
     background-color: rgba( 51, 91, 25,1);
@@ -147,7 +173,7 @@ h2 {
 .contact-link {
     width: 100px;
     height: 100px;
-    line-height: 100px;
+    line-height: 115px;
     text-align: center;
     display: block;
     text-decoration: none;
